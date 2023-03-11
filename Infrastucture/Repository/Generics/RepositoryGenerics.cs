@@ -40,12 +40,18 @@ namespace Infrastucture.Repository.Generics
 
         public async Task<T> GetEntityById(int Id)
         {
-            throw new NotImplementedException();
+            using (var data = new ContextBase(_ObtionsBuilder))
+            {
+                return await data.Set<T>().FindAsync(Id);
+            }
         }
 
         public async Task<List<T>> List()
         {
-            throw new NotImplementedException();
+            using (var data = new ContextBase(_ObtionsBuilder))
+            {
+                return await data.Set<T>().ToListAsync();                
+            }
         }
 
         public async Task Update(T Objeto)
