@@ -3,6 +3,6 @@
     public enum TipoUsuario
     {
         Administrador = 1,
-        Comun = 2
+        Comum = 2
     }
 }
