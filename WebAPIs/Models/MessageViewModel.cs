@@ -1,6 +1,6 @@
 ﻿namespace WebAPIs.Models
 {
-    public class MensagemViewModel
+    public class MessageViewModel
     {        
         public int Id { get; set; }
 
