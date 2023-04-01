@@ -34,7 +34,7 @@ namespace Infrastucture.Configuration
 
         public string ObterStringConexao()
         {
-            return "Data Source = DESKTOP-U0N4N3T\\SQLEXPRESS;Initial Catalog = API_DDD_2022; Integrated Security = False; User ID = sa;Password=123; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = False";                   
+            return "Data Source = DESKTOP-U0N4N3T\\SQLEXPRESS,1433;Initial Catalog = API_DDD_2022; Integrated Security = False; User ID = sa;Password=123; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = False";                   
         }
     }
 }

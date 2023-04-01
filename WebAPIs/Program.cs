@@ -2,8 +2,10 @@ using AutoMapper;
 using Domain.Interfaces;
 using Domain.Interfaces.Generics;
 using Domain.Interfaces.InterfaceServices;
+using Domain.InterfacesExternal;
 using Domain.Services;
 using Entities.Entities;
+using Infrastructure.RepositoriesExternal;
 using Infrastucture.Configuration;
 using Infrastucture.Repository.Generics;
 using Infrastucture.Repository.Repositories;
@@ -31,6 +33,7 @@ builder.Services.AddRazorPages();
 //Interface e repositorio
 builder.Services.AddSingleton(typeof(IGeneric<>), typeof(RepositoryGenerics<>));
 builder.Services.AddSingleton<IMessage, RepositoryMessage>();
+builder.Services.AddSingleton<IProduto, RepositoryProduto>();
 
 //Serviço dominio
 builder.Services.AddSingleton<IServiceMessage, ServiceMessage>();
